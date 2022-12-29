@@ -1,5 +1,6 @@
 package com.manoj.users.dto;
 
+import com.manoj.users.web.model.response.AlbumResponseModel;
 import com.manoj.users.web.model.response.UserRest;
 import org.springframework.beans.BeanUtils;
 
@@ -21,6 +22,7 @@ public class UserDTO implements Serializable {
     private String emailVerificationToken;
     private Boolean emailVerificationStatus=false;
     private List<AddressDTO> addresses = new ArrayList<>();
+    private List<AlbumResponseModel> albums = new ArrayList<>();
 
     public UserRest toUserRest() {
         UserRest userRest = new UserRest();
@@ -112,5 +114,13 @@ public class UserDTO implements Serializable {
 
     public void setAddresses(List<AddressDTO> addresses) {
         this.addresses = addresses;
+    }
+
+    public List<AlbumResponseModel> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(List<AlbumResponseModel> albums) {
+        this.albums = albums;
     }
 }

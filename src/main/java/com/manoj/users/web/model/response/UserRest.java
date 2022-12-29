@@ -9,6 +9,7 @@ public class UserRest {
     private String lastName;
     private String email;
     private List<AddressRest> addresses = new ArrayList<>();
+    private List<AlbumResponseModel> albums;
 
     public String getUserId() {
         return userId;
@@ -48,5 +49,13 @@ public class UserRest {
 
     public void setAddresses(List<AddressRest> addresses) {
         this.addresses = addresses;
+    }
+
+    public List<AlbumResponseModel> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(List<AlbumResponseModel> albums) {
+        this.albums = albums;
     }
 }
